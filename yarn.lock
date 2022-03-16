@@ -11,17 +11,26 @@ __metadata:
   dependencies:
     "@angular-devkit/build-angular": ~13.2.5
     "@angular/animations": ~13.2.0
+    "@angular/cdk": 13.2.6
     "@angular/cli": ~13.2.5
     "@angular/common": ~13.2.0
     "@angular/compiler": ~13.2.0
     "@angular/compiler-cli": ~13.2.0
     "@angular/core": ~13.2.0
+    "@angular/flex-layout": ^13.0.0-beta.38
     "@angular/forms": ~13.2.0
+    "@angular/material": 13.2.6
     "@angular/platform-browser": ~13.2.0
     "@angular/platform-browser-dynamic": ~13.2.0
     "@angular/router": ~13.2.0
+    "@ngrx/effects": latest
+    "@ngrx/router-store": ^13.0.2
+    "@ngrx/schematics": latest
+    "@ngrx/store": latest
+    "@ngrx/store-devtools": latest
     "@types/jasmine": ~3.10.0
     "@types/node": ^12.11.1
+    immer: ^9.0.12
     jasmine-core: ~4.0.0
     karma: ~6.3.0
     karma-chrome-launcher: ~3.1.0
@@ -218,6 +227,23 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@angular/cdk@npm:13.2.6":
+  version: 13.2.6
+  resolution: "@angular/cdk@npm:13.2.6"
+  dependencies:
+    parse5: ^5.0.0
+    tslib: ^2.3.0
+  peerDependencies:
+    "@angular/common": ^13.0.0 || ^14.0.0-0
+    "@angular/core": ^13.0.0 || ^14.0.0-0
+    rxjs: ^6.5.3 || ^7.4.0
+  dependenciesMeta:
+    parse5:
+      optional: true
+  checksum: 8cce0c7568bf7d83ec1b8f6be171f061531c9c0c681b94967f6345f33e7febf58b71266d1414ef71e16808229de03c3fa835cb032e043a494c398fffc62f7d24
+  languageName: node
+  linkType: hard
+
 "@angular/cli@npm:~13.2.5":
   version: 13.2.6
   resolution: "@angular/cli@npm:13.2.6"
@@ -305,6 +331,21 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@angular/flex-layout@npm:^13.0.0-beta.38":
+  version: 13.0.0-beta.38
+  resolution: "@angular/flex-layout@npm:13.0.0-beta.38"
+  dependencies:
+    tslib: ^2.3.0
+  peerDependencies:
+    "@angular/cdk": ^13.0.0
+    "@angular/common": ^13.0.0
+    "@angular/core": ^13.0.0
+    "@angular/platform-browser": ^13.0.0
+    rxjs: ^6.5.3 || ^7.4.0
+  checksum: c5f22d6748ad8dc2ebc9fa57c82d80cb9f9942d66dfb0246315d351872a2c9df5fa95d849fb0d2750ca99812d5e27d073b7842e07e6f21e541cbe337d9f4e7ed
+  languageName: node
+  linkType: hard
+
 "@angular/forms@npm:~13.2.0":
   version: 13.2.6
   resolution: "@angular/forms@npm:13.2.6"
@@ -316,6 +357,23 @@ __metadata:
     "@angular/platform-browser": 13.2.6
     rxjs: ^6.5.3 || ^7.4.0
   checksum: 579fa11046db7ff61e139feae95ecd79da24379ac70ba1032d5309d86a0b67e70cdf53f02a3337e71eb56f39e8cdcc51aba74547063dee164c277904d882d7bb
+  languageName: node
+  linkType: hard
+
+"@angular/material@npm:13.2.6":
+  version: 13.2.6
+  resolution: "@angular/material@npm:13.2.6"
+  dependencies:
+    tslib: ^2.3.0
+  peerDependencies:
+    "@angular/animations": ^13.0.0 || ^14.0.0-0
+    "@angular/cdk": 13.2.6
+    "@angular/common": ^13.0.0 || ^14.0.0-0
+    "@angular/core": ^13.0.0 || ^14.0.0-0
+    "@angular/forms": ^13.0.0 || ^14.0.0-0
+    "@angular/platform-browser": ^13.0.0 || ^14.0.0-0
+    rxjs: ^6.5.3 || ^7.4.0
+  checksum: 0287d8b966271cf1cd4587859ec59124a2019c542bffc561251238221e4a31b9fb2dfe57c1e47263b8c195aa66175ae0f8bc4373c66db11299793ff1aee406a7
   languageName: node
   linkType: hard
 
@@ -1728,6 +1786,65 @@ __metadata:
     "@jridgewell/resolve-uri": ^3.0.3
     "@jridgewell/sourcemap-codec": ^1.4.10
   checksum: ab8bce84bbbc8c34f3ba8325ed926f8f2d3098983c10442a80c55764c4eb6e47d5b92d8ff20a0dd868c3e76a3535651fd8a0138182c290dbfc8396195685c37b
+  languageName: node
+  linkType: hard
+
+"@ngrx/effects@npm:latest":
+  version: 13.0.2
+  resolution: "@ngrx/effects@npm:13.0.2"
+  dependencies:
+    tslib: ^2.0.0
+  peerDependencies:
+    "@angular/core": ^13.0.0
+    "@ngrx/store": 13.0.2
+    rxjs: ^6.5.3 || ^7.4.0
+  checksum: 6f15d4169845e704d2521c83dd07880e90385e7194b278eb579349747700487b542fa6375731d609a0c452c854d8e0ca437751d90564b4c2cdd2a5f29115b2ce
+  languageName: node
+  linkType: hard
+
+"@ngrx/router-store@npm:^13.0.2":
+  version: 13.0.2
+  resolution: "@ngrx/router-store@npm:13.0.2"
+  dependencies:
+    tslib: ^2.0.0
+  peerDependencies:
+    "@angular/common": ^13.0.0
+    "@angular/core": ^13.0.0
+    "@angular/router": ^13.0.0
+    "@ngrx/store": 13.0.2
+    rxjs: ^6.5.3 || ^7.4.0
+  checksum: db0fca19b3fe0d8b0c82879d6ed5c6f0048b7e99c2ca59d0c25a9e805221590df9839ae4b1fc065cc1ebc67e6dece7ca53dd91eb657aef267135c89b77a21b9f
+  languageName: node
+  linkType: hard
+
+"@ngrx/schematics@npm:latest":
+  version: 13.0.2
+  resolution: "@ngrx/schematics@npm:13.0.2"
+  checksum: 749ece874f777d90e84e15aef7a1d9b483afe917136c95d7a143b35210d1c9bec00ecc415e7697c96de955387ab80d3caa279fa6c124cd4afdbdfe11123caaf1
+  languageName: node
+  linkType: hard
+
+"@ngrx/store-devtools@npm:latest":
+  version: 13.0.2
+  resolution: "@ngrx/store-devtools@npm:13.0.2"
+  dependencies:
+    tslib: ^2.0.0
+  peerDependencies:
+    "@ngrx/store": 13.0.2
+    rxjs: ^6.5.3 || ^7.4.0
+  checksum: 0fa316926f091d6b82d86b3b9e832e8998772ff42c1733202379f465607f79a74a2abf89e25510aeb1226191d4047199ab700ba0135712949ba5555bbc2b037d
+  languageName: node
+  linkType: hard
+
+"@ngrx/store@npm:latest":
+  version: 13.0.2
+  resolution: "@ngrx/store@npm:13.0.2"
+  dependencies:
+    tslib: ^2.0.0
+  peerDependencies:
+    "@angular/core": ^13.0.0
+    rxjs: ^6.5.3 || ^7.4.0
+  checksum: 4d2524c437b4505da368e9cf7fe6a9914150a4a2c09491afd537fba57a8657273d59feef252ce0f074ed9a77c286ca5894061c71b6b10701ef0a1f83c7197f46
   languageName: node
   linkType: hard
 
@@ -4784,6 +4901,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"immer@npm:^9.0.12":
+  version: 9.0.12
+  resolution: "immer@npm:9.0.12"
+  checksum: bcbec6d76dac65e49068eb67ece4d407116e62b8cde3126aa89c801e408f5047763ba0aeb62f1938c1aa704bb6612f1d8302bb2a86fa1fc60fcc12d8b25dc895
+  languageName: node
+  linkType: hard
+
 "immutable@npm:^4.0.0":
   version: 4.0.0
   resolution: "immutable@npm:4.0.0"
@@ -6444,6 +6568,13 @@ __metadata:
   dependencies:
     parse5: ^6.0.1
   checksum: c62961aeac04a1fc4a6ce1053520da935694abb877d2b8284258361768b10c424e2c1a25aec22aa1e7841d36a74caddf79a0544020bdb43c7d57f90a5f7bacca
+  languageName: node
+  linkType: hard
+
+"parse5@npm:^5.0.0":
+  version: 5.1.1
+  resolution: "parse5@npm:5.1.1"
+  checksum: 613a714af4c1101d1cb9f7cece2558e35b9ae8a0c03518223a4a1e35494624d9a9ad5fad4c13eab66a0e0adccd9aa3d522fc8f5f9cc19789e0579f3fa0bdfc65
   languageName: node
   linkType: hard
 
@@ -8145,7 +8276,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"tslib@npm:2.3.1, tslib@npm:^2.1.0, tslib@npm:^2.3.0":
+"tslib@npm:2.3.1, tslib@npm:^2.0.0, tslib@npm:^2.1.0, tslib@npm:^2.3.0":
   version: 2.3.1
   resolution: "tslib@npm:2.3.1"
   checksum: de17a98d4614481f7fcb5cd53ffc1aaf8654313be0291e1bfaee4b4bb31a20494b7d218ff2e15017883e8ea9626599b3b0e0229c18383ba9dce89da2adf15cb9
