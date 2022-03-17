@@ -19,7 +19,7 @@ export class DeckService {
     }) as Observable<DeckApiResponse>;
   }
 
-  drawCards(deckId: number, numCards: number): Observable<DeckApiResponse> {
+  drawCards(deckId: string, numCards: number): Observable<DeckApiResponse> {
     return this.http.get(`${environment.deckApi}/${deckId}/draw/`, {
       params: {
         count: numCards,

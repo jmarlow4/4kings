@@ -10,6 +10,7 @@ import {
   routerReducer,
   StoreRouterConnectingModule,
 } from '@ngrx/router-store';
+import { DeckModule } from './deck/deck.module';
 
 @NgModule({
   imports: [
@@ -27,6 +28,7 @@ import {
       serializer: DefaultRouterStateSerializer,
     }),
     InitStateModule,
+    DeckModule,
   ],
 })
 export class AppStoreModule {}

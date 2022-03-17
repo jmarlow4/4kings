@@ -1,1 +1,10 @@
-<mat-card> Derp </mat-card>
+<mat-card
+  [style.fontFamily]="'Roboto Slab'"
+  [style.fontSize]="'1.25rem'"
+  [style.color]="color"
+  fxLayout="row"
+  fxLayoutAlign="space-between center"
+>
+  <div>{{ value }}</div>
+  <div>{{ suit }}</div>
+</mat-card>

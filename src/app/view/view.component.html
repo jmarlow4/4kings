@@ -1,1 +1,40 @@
-<app-card></app-card>
+<div
+  fxLayout="row"
+  fxLayoutGap="8px"
+  [style.padding]="'8px'"
+  [style.maxWidth]="'600px'"
+  [style.margin]="'0 auto'"
+>
+  <div fxLayout="column" fxLayoutGap="8px" fxFlex="full">
+    <app-card
+      *ngFor="let card of $spadesCards | async | sort: 'order'"
+      [suit]="card.suit"
+      [value]="card.value"
+      [color]="card.color"
+    ></app-card>
+  </div>
+  <div fxLayout="column" fxLayoutGap="8px" fxFlex="full">
+    <app-card
+      *ngFor="let card of $diamondsCards | async | sort: 'order'"
+      [suit]="card.suit"
+      [value]="card.value"
+      [color]="card.color"
+    ></app-card>
+  </div>
+  <div fxLayout="column" fxLayoutGap="8px" fxFlex="full">
+    <app-card
+      *ngFor="let card of $clubsCards | async | sort: 'order'"
+      [suit]="card.suit"
+      [value]="card.value"
+      [color]="card.color"
+    ></app-card>
+  </div>
+  <div fxLayout="column" fxLayoutGap="8px" fxFlex="full">
+    <app-card
+      *ngFor="let card of $heartsCards | async | sort: 'order'"
+      [suit]="card.suit"
+      [value]="card.value"
+      [color]="card.color"
+    ></app-card>
+  </div>
+</div>
